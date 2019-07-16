@@ -18,6 +18,7 @@ import java.io.IOException;
 public class NewsController extends AbstractController {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         int offset = getOffset(request, Constants.LIMIT_ARTICLES_PER_PAGE);
         String requestUrl = request.getRequestURI();
         Items<Article> items = listArticles(requestUrl, offset, request);

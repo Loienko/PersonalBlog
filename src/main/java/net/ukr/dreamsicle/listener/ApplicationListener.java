@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.util.GregorianCalendar;
 import java.util.Map;
 
 @WebListener
@@ -21,7 +22,7 @@ public class ApplicationListener implements ServletContextListener {
         Map<Integer, Category> map = serviceManager.getBusinessService().mapCategories();
         sce.getServletContext().setAttribute("social_googleplus_clientId", serviceManager.getApplicationProperty("social.googleplus.clientId"));
         sce.getServletContext().setAttribute(Constants.CATEGORY_MAP, map);
-        LOGGER.info("Application started");
+        LOGGER.info("Application started - " + new GregorianCalendar().getTime());
     }
 
     @Override

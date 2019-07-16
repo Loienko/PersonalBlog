@@ -5,7 +5,7 @@
 
 <c:forEach var="article" items="${list }">
     <c:set var="category" value="${CATEGORY_MAP[article.idCategory] }" />
-    <div class="article thumbnail">
+    <div class="article thumbnail" style="margin-top: 75px">
         <a href="${article.articleLink }"><img src="${article.logo }" alt="${article.title }" /></a>
         <div class="data">
             <h3><a href="${article.articleLink }">${article.title }</a></h3>

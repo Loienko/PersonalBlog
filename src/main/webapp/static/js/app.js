@@ -58,8 +58,7 @@ function submitComment() {
                     $('#new-comment-loading img').css('display', 'none');
                 }
             });
-        }
-        else {
+        } else {
             $('#comment-content').parent().find('.form-error').css('display', 'inline');
             $('#new-comment-container textarea').val('');
         }
@@ -93,3 +92,8 @@ function reply(name) {
         scrollTop: $('#new-comment-container textarea').offset().top
     }, 2000);
 }
+
+
+
+
+

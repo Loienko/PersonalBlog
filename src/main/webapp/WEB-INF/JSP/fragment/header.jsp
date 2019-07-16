@@ -1,18 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<div class="callout primary" style="margin: 0;">
-    <div class="row">
-        <div class="large-6 medium-6 columns">
-            <h1>IncreSci</h1>
-        </div>
-        <div class="large-6 medium-6 columns">
-            <form action="/search" method="get">
-                <div class="input-group" style="margin-top: 1em;">
-                    <input id="search" class="input-group-field" name="query" placeholder="Search query" type="text" value="${searchQuery }">
-                    <div class="input-group-button">
-                        <input class="button" value="Find" type="submit">
-                    </div>
-                </div>
-            </form>
-        </div>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true" %>
+
+<div class="container-fluid">
+    <div id="logo" class="pull-left">
+        <h1><a href="/news" class="scrollto">Incre Sci</a></h1>
     </div>
+    <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li class="menu-active"><a href="/news">Домой</a></li>
+            <li class="menu-has-children"><a href="">Категории</a>
+                <ul>
+                    <li><a href="/news/quasiScience">Квазинаука</a></li>
+                    <li><a href="/news/future">Будущее</a></li>
+                    <li><a href="/news/universe">Вселенная</a></li>
+                    <li><a href="/news/medicine">Медицина</a></li>
+                    <li><a href="/news/heroesInScience">Супер герои в науке</a></li>
+                    <li><a href="/news/interestingFacts">Интересные факты</a></li>
+                </ul>
+            </li>
+            <li><a href="/about">Обо мне</a></li>
+            <li><a href="/contact">Обратная связь</a></li>
+            <li>
+                <div class="container">
+                    <form action="/search" method="get">
+                        <input id="search" class="search-txt" name="query" placeholder="Поиск"
+                               type="text" value="${searchQuery }">
+                        <span class="search-box-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </div>

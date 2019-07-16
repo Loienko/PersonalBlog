@@ -4,7 +4,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cb1f853e58974b8"></script>
 
 <div class="article thumbnail">
@@ -21,7 +20,7 @@
             <li><i class="fi-eye"></i>Hits: <fmt:formatNumber value="${article.views }"/></li>
         </ul>
         <hr/>
-        <div class="content">${article.content }</div>
+        <div class="content" align="justify">${article.content }</div>
         <%-- ----------------------------------------- Social buttons ----------------------------------------- --%>
         <div class="row columns social">
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -37,7 +36,7 @@
             </div>
             <div id="comments-load-more-ctrl" class="row column text-center">
                 <a href="javascript:moreComments();" class="button hollow expanded load-more-btn"
-                ${article.comments >  fn:length(comments) ? '' : 'style="display:none"' }>Load More</a>
+                ${article.comments >  fn:length(comments) ? '' : 'style="display:none"' }>Загрузить еще</a>
                 <img src="/static/img/loading.gif" alt="Loading..." class="loading-indicator"/>
             </div>
         </div>

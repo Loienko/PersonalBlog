@@ -5,7 +5,7 @@
             <i class="fi-shield"></i>PERSONAL BLOG
         </p>
         <p class="footer-links">
-            <a href="/news">News</a>
+            <a href="/news">Home</a>
             <a href="/search">Search</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
@@ -21,7 +21,7 @@
             </li>
             <li>
                 <p>
-                    <i class="fi-telephone"></i><a href="tel:12223334444">+38(063)-**-**-***</a>
+                    <i class="fi-telephone"></i><a href="tel:+380635881641">+38(063)-**-**-***</a>
                 </p>
             </li>
             <li>

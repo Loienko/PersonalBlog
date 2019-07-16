@@ -418,11 +418,12 @@ html {
 body {
     padding: 0;
     margin: 0;
+    height: 405px;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     line-height: 1.5;
     color: #0a0a0a;
-    background: #fefefe;
+    /*background: #fefefe;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -509,6 +510,17 @@ button {
     max-width: none;
 }
 
+.column.row.row, .row.row.columns {
+    float: none;
+}
+
+.row .column.row.row, .row .row.row.columns {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .column, .columns {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -529,17 +541,6 @@ button {
 
 .column.end:last-child:last-child, .end.columns:last-child:last-child {
     float: left;
-}
-
-.column.row.row, .row.row.columns {
-    float: none;
-}
-
-.row .column.row.row, .row .row.row.columns {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .small-1 {
@@ -1278,7 +1279,7 @@ button {
 
 @media screen and (min-width: 64em) {
     .large-1 {
-        width: 8.33333%;
+        width: 10%;
     }
 
     .large-push-1 {
@@ -1440,7 +1441,7 @@ button {
     }
 
     .large-10 {
-        width: 83.33333%;
+        width: 80%;
     }
 
     .large-push-10 {
@@ -1768,10 +1769,10 @@ h6 {
 }
 
 a {
-    color: #2199e8;
+    color: #ffffff;
     text-decoration: none;
     line-height: inherit;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 a:hover, a:focus {
@@ -2217,17 +2218,14 @@ p + .stat {
 
 .button.dropdown::after {
     content: '';
-    display: block;
     width: 0;
     height: 0;
-    border: inset 0.4em;
-    border-color: #fefefe transparent transparent;
-    border-top-style: solid;
+    border: 0.4em inset transparent;
+    border-top: solid #fefefe;
     position: relative;
     top: 0.4em;
     float: right;
     margin-left: 1em;
-    display: inline-block;
 }
 
 .button.arrow-only::after {
@@ -2241,7 +2239,6 @@ textarea {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    height: 2.4375rem;
     padding: 0.5rem;
     border: 1px solid #cacaca;
     margin: 0 0 1rem;
@@ -2340,6 +2337,7 @@ label.middle {
     display: table;
     width: 100%;
     margin-bottom: 1rem;
+
 }
 
 .input-group > :first-child {
@@ -2376,7 +2374,7 @@ label.middle {
 
 .input-group-field {
     border-radius: 0;
-    height: 2.5rem;
+    height: 1.5rem;
 }
 
 .input-group-button {
@@ -2612,6 +2610,7 @@ select[multiple] {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 15px;
 }
 
 .clearfix::before, .clearfix::after {
@@ -2677,9 +2676,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
-    border-color: #2199e8 transparent transparent;
-    border-top-style: solid;
+    border: 6px inset transparent;
+    border-top: solid #2199e8;
     position: absolute;
     top: 50%;
     margin-top: -4px;
@@ -2894,7 +2892,7 @@ select[multiple] {
     border: 1px solid rgba(10, 10, 10, 0.25);
     border-radius: 0;
     position: relative;
-    color: #0a0a0a;
+    color: rgba(45, 172, 16, 0.83);
     background-color: white;
 }
 
@@ -2907,7 +2905,12 @@ select[multiple] {
 }
 
 .callout.primary {
-    background-color: #3a94e9;
+    background: url("/media/future/leave-our-home.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
 }
 
 .callout.secondary {
@@ -2927,17 +2930,11 @@ select[multiple] {
 }
 
 .callout.small {
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    padding: 0.5rem;
 }
 
 .callout.large {
-    padding-top: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 3rem;
+    padding: 3rem;
 }
 
 .close-button {
@@ -2998,9 +2995,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
-    border-color: transparent transparent transparent #2199e8;
-    border-left-style: solid;
+    border: 6px inset transparent;
+    border-left: solid #2199e8;
     position: absolute;
     top: 50%;
     margin-top: -6px;
@@ -3012,9 +3008,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
-    border-color: transparent #2199e8 transparent transparent;
-    border-right-style: solid;
+    border: 6px inset transparent;
+    border-right: solid #2199e8;
     float: left;
     margin-right: 0.75rem;
     margin-left: 0.6rem;
@@ -3073,9 +3068,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 5px;
-    border-color: #2199e8 transparent transparent;
-    border-top-style: solid;
+    border: 5px inset transparent;
+    border-top: solid #2199e8;
     position: absolute;
     top: 0.825rem;
     right: 5px;
@@ -3086,9 +3080,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 5px;
-    border-color: transparent #2199e8 transparent transparent;
-    border-right-style: solid;
+    border: 5px inset transparent;
+    border-right: solid #2199e8;
     float: left;
     margin-left: 0;
     margin-right: 10px;
@@ -3099,9 +3092,8 @@ select[multiple] {
     display: block;
     width: 0;
     height: 0;
-    border: inset 5px;
-    border-color: transparent transparent transparent #2199e8;
-    border-left-style: solid;
+    border: 5px inset transparent;
+    border-left: solid #2199e8;
 }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow.opens-inner .submenu {
@@ -3243,8 +3235,7 @@ select[multiple] {
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .media-object.stack-for-small .media-object-section {
         display: block;
-        padding: 0;
-        padding-bottom: 1rem;
+        padding: 0 0 1rem;
     }
 
     .media-object.stack-for-small .media-object-section img {
@@ -3379,8 +3370,6 @@ select[multiple] {
     font-weight: bold;
     color: inherit;
     line-height: 1;
-    padding-top: 0;
-    padding-bottom: 0;
     padding: 0.7rem 1rem;
 }
 
@@ -3792,7 +3781,6 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    position: absolute;
     left: 0;
     z-index: 1;
     display: inline-block;
@@ -3975,7 +3963,6 @@ body.is-reveal-open {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     height: 100vh;
     min-height: 100vh;
     max-width: none;
@@ -4123,8 +4110,8 @@ table {
 thead,
 tbody,
 tfoot {
-    border: 1px solid #f1f1f1;
-    background-color: #fefefe;
+    border: 2px solid #130b0b1f;
+    background-color: #f5efef00;
 }
 
 caption {
@@ -4379,9 +4366,8 @@ table.hover tr:nth-of-type(even):hover {
     display: block;
     width: 0;
     height: 0;
-    border: inset 0.75rem;
-    border-color: transparent transparent #0a0a0a;
-    border-bottom-style: solid;
+    border: 0.75rem inset transparent;
+    border-bottom: solid #0a0a0a;
     bottom: 100%;
     position: absolute;
     left: 50%;
@@ -4395,9 +4381,8 @@ table.hover tr:nth-of-type(even):hover {
     display: block;
     width: 0;
     height: 0;
-    border: inset 0.75rem;
-    border-color: #0a0a0a transparent transparent;
-    border-top-style: solid;
+    border: 0.75rem inset transparent;
+    border-top: solid #0a0a0a;
     top: 100%;
     bottom: auto;
 }
@@ -4407,9 +4392,8 @@ table.hover tr:nth-of-type(even):hover {
     display: block;
     width: 0;
     height: 0;
-    border: inset 0.75rem;
-    border-color: transparent transparent transparent #0a0a0a;
-    border-left-style: solid;
+    border: 0.75rem inset transparent;
+    border-left: solid #0a0a0a;
     bottom: auto;
     left: 100%;
     top: 50%;
@@ -4423,9 +4407,8 @@ table.hover tr:nth-of-type(even):hover {
     display: block;
     width: 0;
     height: 0;
-    border: inset 0.75rem;
-    border-color: transparent #0a0a0a transparent transparent;
-    border-right-style: solid;
+    border: 0.75rem inset transparent;
+    border-right: solid #0a0a0a;
     bottom: auto;
     left: auto;
     right: 100%;
